@@ -9,7 +9,7 @@ class WC_Post_Extensions {
     public function prepend_featured_content( $content ) {
         global $post;
 
-        if ( ! isset( $post ) ) {
+        if ( ! is_single() || ! isset( $post ) ) {
             return $content;
         }
 
