@@ -97,7 +97,7 @@ abstract class WC_Meta_Box {
     protected function display_wysiwyg_field( $field, $value = '' ) {
         ob_start();
 
-        wp_editor( $value, $field[ 'name' ], array( 'textarea_rows' => '5' ) );
+        wp_editor( $value, $field[ 'name' ] );
 
         return ob_get_clean();
     }
